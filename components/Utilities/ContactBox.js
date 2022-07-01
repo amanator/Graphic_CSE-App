@@ -1,27 +1,24 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
-import notificationContext from '../../Context/Notifications/NotificationContext'
 import adminContext from '../../Context/Admin/AdminContext'
 
 export default function Box(props) {
     // console.log(props)
-  let { _id, date, title, description } = props.data
-  const context = useContext(notificationContext)
-  const { deleteNotification } = context
+  let { _id, name, email, issue } = props.data
   const AdminCon = useContext(adminContext)
-  let { admin } = AdminCon
+  let { admin, deleteContact } = AdminCon
 
   return (
 
       <View style={styles.container}>
     
-          <Text style={styles.box_date}>Date : {date} </Text>
-          <Text style={styles.box_title}> {title}</Text>
-          <Text style={styles.box_desc}> {description}</Text>
+          <Text style={styles.box_name}>Name : {name} </Text>
+          <Text style={styles.box_email}>Email : {email}</Text>
+          <Text style={styles.box_issue}>Issue : {issue}</Text>
  
 
         {admin && <TouchableOpacity style={styles.delete} onPress={() => {
-          deleteNotification(_id)
+          deleteContact(_id)
         }}>
           <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>Delete </Text>
 
@@ -36,32 +33,28 @@ const styles = StyleSheet.create({
 
   container: {
 
-    marginTop: 20,
+    margin: 20,
     borderColor: "black",
-    // borderWidth: 2,
-    borderRadius:10,
-    backgroundColor:'#b3e0ff',
+    borderWidth: 2,
+    paddingTop: 5,
+    paddingLeft:5
+
   },
 
-  box_date: {
+  box_name: {
+    marginVertical:3,
     fontWeight: "bold",
     padding: 1,
-    marginTop:5,
-    marginLeft:5,
     fontSize: 15,
     // textAlign: "center"
   },
-  box_title: {
-    paddingHorizontal: 10,
-    textAlign: "center",
-    marginTop: 10,
+  box_email: {
+    marginVertical:3,
     fontWeight:'bold',
-    fontSize:20,
+    fontSize:15,
   },
-  box_desc: {
-    paddingHorizontal: 10,
-    textAlign: "center",
-    marginVertical: 10,
+  box_issue: {
+    marginVertical:3,
     fontWeight:'bold',
     fontSize:15,
    

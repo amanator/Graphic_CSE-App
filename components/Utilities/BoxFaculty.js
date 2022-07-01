@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
-import facultyContext from '../../Context/FacultyContext';
+import facultyContext from '../../Context/Faculty/FacultyContext';
 import adminContext from '../../Context/Admin/AdminContext'
 
 export default function Box(props) {

@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
     // width: "100%",
     // height: undefined,
     // aspectRatio: 1,
-    height: 255,
-    width: 300
+    height: 243,
+    width: 286
   },
   box_title: {
     fontWeight: "bold",

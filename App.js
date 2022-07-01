@@ -8,7 +8,7 @@ import Contact from './components/Screens/Contact';
 import Admin from './components/Screens/Admin';
 import AdminState from './Context/Admin/AdminState';
 import NotificationState from './Context/Notifications/NotificationState';
-import FacultyState from './Context/FacultyState';
+import FacultyState from './Context/Faculty/FacultyState';
 import CustomDrawer from './components/Utilities/CustomDrawer';
 import PlacementState from './Context/Placement/PlacementState';
 import { NavigationContainer } from '@react-navigation/native';
@@ -28,7 +28,7 @@ export default function App() {
               {/* <Placement/> */}
               {/* <Contact/> */}
               <NavigationContainer>
-                <Drawer.Navigator initialRouteName="Admin" screenOptions={{
+                <Drawer.Navigator initialRouteName="Home" screenOptions={{
                   drawerStyle: {
                     backgroundColor: '#c6cbef',
                     width: 240,

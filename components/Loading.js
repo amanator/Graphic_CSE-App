@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Loading() {
   return (
-    <View>
+    <View >
       <Image style={styles.image} source={ require('../assets/loading.gif')} />
     </View>
   )
@@ -11,8 +11,10 @@ export default function Loading() {
 
 const styles = StyleSheet.create({
     image: {
-        width: "100%",
-        height: undefined,
-        aspectRatio: 1,
+      marginLeft:60,
+        width: 200,
+        height:200
+        // height: undefined,
+        // aspectRatio: 1,
       },
 })

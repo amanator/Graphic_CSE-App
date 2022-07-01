@@ -1,7 +1,7 @@
 import { View, StyleSheet, FlatList, Text, Modal, TextInput, Pressable } from 'react-native'
 import React, { useEffect, useState, useContext } from 'react'
 import BoxFaculty from "../Utilities/BoxFaculty"
-import facultyContext from '../../Context/FacultyContext';
+import facultyContext from '../../Context/Faculty/FacultyContext';
 // import data from '../data'
 import Load from '../Loading';
 import adminContext from '../../Context/Admin/AdminContext'
@@ -18,7 +18,7 @@ export default function News(props) {
     }, [])
 
     const AdminCon = useContext(adminContext)
-    let { admin } = AdminCon
+    let { admin, loading } = AdminCon
 
     const [detail, setdetail] = useState({ name: "", position: "", imgUrl: "" })
 
@@ -27,7 +27,7 @@ export default function News(props) {
     }
 
 
-    const [loading, setloading] = useState(false)
+    // const [loading, setloading] = useState(false)
 
 
     return (
@@ -37,7 +37,7 @@ export default function News(props) {
                 transparent={true}
                 visible={modalVisible}
                 onRequestClose={() => {
-                    Alert.alert("Modal has been closed.");
+                    alert("Modal has been closed.");
                     setModalVisible(!modalVisible);
                 }}
             >
@@ -60,7 +60,8 @@ export default function News(props) {
 
                         <Pressable
                             style={[styles.button, styles.buttonClose]}
-                            onPress={() => addFaculty(detail)}
+                            onPress={() =>{ addFaculty(detail)
+                                setModalVisible(!modalVisible)}}
                         >
                             <Text style={styles.textStyle}>Submit</Text>
                         </Pressable>
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
         elevation: 2
     },
     buttonOpen: {
-        backgroundColor: "#F194FF",
+        backgroundColor: "#ff3333",
     },
     buttonClose: {
         backgroundColor: "#2196F3",
@@ -162,6 +163,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'black',
         height: 40,
+        width:200,
         paddingHorizontal: 10,
         borderRadius: 10
     },
