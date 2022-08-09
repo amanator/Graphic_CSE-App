@@ -1,0 +1,8 @@
+# Graphic_CSE-App
+
+The purpose of this system is to build a high-quality app for CSE department which will show details about the CSE department of Graphic Era Hill University. The app will contain multiple features which will be easy to use.
+
+This project aims to build an android application for our college departmental notice board which notifies all instructions and updates of department. Update includes information about lecturers, upcoming departmental activities, upcoming holidays, placements, etc. 
+
+The era of mobile technology opens the windows to the android app The websites are vanishing and the mobile phones are emerging It's the time to change from conventional websites to apps which has become the part of our daily routine we are introducing CSE GEHU apk the android application software which would be a miniature of our college CSE department information. It works not only as a website but also it can work as a small college Management software Our multipurpose program is considering the user as either an albertian or non-albertian, student or parent, faculties of office staffs individually projec gives a total solution to everyone The application becomes also a Mobile version of the official website. It gives us more comfort and a better user interface It acts as an overview about the campus to a non-albertian the college placement departments, notifications, faculties etc & major events conducted & to review then Latest news and updates about college is got through notifications 
+Students can share their issues and questions related to CSE Department. Students can interact with faculties directly Latest news and updates about college in got through notification. 
